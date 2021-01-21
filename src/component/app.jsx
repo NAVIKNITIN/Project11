@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import Userfield from "./user";
+// import Userfield from "./user";
 import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import Lang from "../context/language";
- 
+// import Lang from "../context/language";
+import Post from "./post"
+ import Userpost from "./userpost";
 class App extends Component{
     constructor(){
         super();
@@ -16,31 +17,46 @@ class App extends Component{
     };
 
     render(){
-        return(
-            <>
-            <div className="container">
-                <div className="col-md-12">
-                    <button className="btn btn-primary"
-                    onClick={()=>this.Language("english")}
-                    >english</button>
-                    <button className="btn btn-danger"
-                    onClick={()=>this.Language("spanish")}
-                    >spanish</button>
-                </div>
-                <div className="row">'
-                <div className="col-md-6">
-                    <Lang.Provider value={this.state.lang}>
-{/* from here the value is directly gone to the language.js in Lang create context */}
-                    <Userfield/> 
-                    </Lang.Provider>
+//         return(
+//             <>
+//             <div className="container">
+//                 <div className="col-md-12">
+//                     <button className="btn btn-primary"
+//                     onClick={()=>this.Language("english")}
+//                     >english</button>
+//                     <button className="btn btn-danger"
+//                     onClick={()=>this.Language("spanish")}
+//                     >spanish</button>
+//                 </div>
+//                 <div className="row">'
+//                 <div className="col-md-6">
+//                     <Lang.Provider value={this.state.lang}>
+// {/* from here the value is directly gone to the language.js in Lang create context */}
+//                     <Userfield/> 
+//                     </Lang.Provider>
                     
+//                 </div>
+//                 <div className="col-md-4">
+//                     <h3>Users</h3>
+//                 </div>
+//                 </div>
+//             </div>
+//             </>
+//         )
+
+        return(
+            <React.Fragment>
+                <div className="container-fluid">
+                    <div className="row">
+                        <div className="col-md-6">
+                            <Post/>
+                        </div>
+                        <div className="col-md-6">
+                            <Userpost/>
+                        </div>
+                    </div>
                 </div>
-                <div className="col-md-4">
-                    <h3>Users</h3>
-                </div>
-                </div>
-            </div>
-            </>
+            </React.Fragment>
         )
     }
 };

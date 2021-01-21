@@ -9,7 +9,9 @@ class Inputfield extends Component{
             <React.Fragment>
             <div className="container">
                 <label htmlFor="username">{text}</label>
-                <input type="text" className="form-control" placeholder={this.context === "english" ? "enter username" : "introduzca su nombre de usuario"}>
+                <input type="text" className="form-control" 
+                placeholder={this.context === "english" ? "enter username" 
+                : "introduzca su nombre de usuario"}>
                 </input>
             </div>
             </React.Fragment>
