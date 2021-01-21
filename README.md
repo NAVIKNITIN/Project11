@@ -1,3 +1,10 @@
+In this project, I have created web page in which the data i am fetching from the (jsonplaceholder.com)post and users data.
+i have used context api and reused the withdata component .
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
